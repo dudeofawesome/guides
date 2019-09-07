@@ -31,7 +31,7 @@
     1. `$ sudo pacman -Syu` (updates all packages)
     1. `$ sudo reboot` (reboot to ensure we're running the potentially newly installed kernel)
 
-At this point, you've got a fully functional Manjaro install. You can stop here if you want, but I'm going to continue to install BTRFS in place of the default EXT4 file system.
+At this point, you've got a fully functional Manjaro install. You can stop here if you want, but I'm going to continue and install BTRFS in place of the default EXT4 file system.
 
 ## Move install to BTRFS
 
@@ -75,7 +75,7 @@ At this point, you've got a fully functional Manjaro install. You can stop here 
     1. `$ sudo mount /dev/disk/by-label/ZROOT /mnt/ZROOT`
     1. `$ sudo btrfs subvolume snapshot / /mnt/ZROOT/snapshots/@root-$(date --iso-8601=minutes)`
 - Set up Snapper
-    1. `$ sudo pacman -Syu snapper`
+    1. `$ sudo pacman -Syu snapper snap-pac`
     1. `$ sudo snapper -c root create-config /`
 
 
